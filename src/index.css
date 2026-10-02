@@ -1,0 +1,235 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --gold-primary: #b8860b;
+    --gold-light: #dfb76c;
+    --gold-dark: #8c6224;
+    --wax-red: #7c1822;
+    --cream-bg: #f9f5ec;
+    --cream-card: #fdfbf7;
+    --text-dark: #3a2e28;
+    --text-muted: #6b5b52;
+  }
+
+  body {
+    background: radial-gradient(circle at 50% 20%, #2f2723 0%, #171311 100%);
+    min-height: 100vh;
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+  }
+
+  #root {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Custom Font Utilities */
+.font-alex {
+  font-family: 'Alex Brush', cursive;
+}
+
+.font-great-vibes {
+  font-family: 'Great Vibes', cursive;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-cinzel-dec {
+  font-family: 'Cinzel Decorative', serif;
+}
+
+.font-cormorant {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.font-playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-amiri {
+  font-family: 'Amiri', serif;
+}
+
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Gold foil text shimmer */
+.gold-text {
+  background: linear-gradient(135deg, #a4782b 0%, #dfb76c 35%, #ffd787 50%, #b8860b 70%, #7d5718 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.gold-text-glow {
+  background: linear-gradient(135deg, #a4782b 0%, #e5c37e 40%, #fff0b8 50%, #c49439 70%, #875c1a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 14px rgba(223, 183, 108, 0.35);
+  display: inline-block;
+}
+
+/* 3D Perspective container */
+.perspective-1000 {
+  perspective: 1200px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Torn / deckle paper edge effects */
+.torn-edge-top {
+  position: relative;
+}
+.torn-edge-top::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 0;
+  width: 100%;
+  height: 14px;
+  background-size: 24px 14px;
+  background-repeat: repeat-x;
+  background-image: radial-gradient(circle at 12px 14px, #fdfbf7 10px, transparent 11px);
+}
+
+/* Custom Scrollbar for Luxury Look */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f1a18;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8c6d48;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b8860b;
+}
+
+/* Falling petal animation keyframes */
+@keyframes petalFall {
+  0% {
+    transform: translate3d(0, -10%, 0) rotate(0deg) rotateY(0deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.9;
+  }
+  85% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: translate3d(120px, 110vh, 0) rotate(360deg) rotateY(180deg);
+    opacity: 0;
+  }
+}
+
+@keyframes petalSway {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(35px);
+  }
+}
+
+/* Wax seal pulse animation */
+@keyframes sealPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 10px 25px -5px rgba(124, 24, 34, 0.5), 0 0 15px rgba(223, 183, 108, 0.4);
+  }
+  50% {
+    transform: scale(1.04);
+    box-shadow: 0 15px 30px -5px rgba(124, 24, 34, 0.7), 0 0 25px rgba(255, 215, 135, 0.6);
+  }
+}
+
+.animate-seal-pulse {
+  animation: sealPulse 2.5s infinite ease-in-out;
+}
+
+/* Gentle organic floral sway keyframes */
+@keyframes floralSwayLeft {
+  0%, 100% {
+    transform: rotate(0deg) translate(0, 0);
+  }
+  50% {
+    transform: rotate(-2.5deg) translate(-4px, -4px) scale(1.02);
+  }
+}
+
+@keyframes floralSwayRight {
+  0%, 100% {
+    transform: rotate(0deg) translate(0, 0);
+  }
+  50% {
+    transform: rotate(2.5deg) translate(4px, -4px) scale(1.02);
+  }
+}
+
+.animate-floral-left {
+  animation: floralSwayLeft 5s ease-in-out infinite;
+  transform-origin: top left;
+}
+
+.animate-floral-right {
+  animation: floralSwayRight 5.5s ease-in-out infinite 0.6s;
+  transform-origin: top right;
+}
+
+/* Gentle Floating Animation for Tap to Respond */
+@keyframes floatBob {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float-bob {
+  animation: floatBob 2s ease-in-out infinite;
+}
+
+/* Gentle Organic Breeze Sway for End Flower */
+@keyframes endFlowerSway {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  30% {
+    transform: translateY(-5px) rotate(-1.5deg) scale(1.025);
+  }
+  70% {
+    transform: translateY(-3px) rotate(1.5deg) scale(1.02);
+  }
+}
+
+.animate-end-flower {
+  animation: endFlowerSway 5.5s ease-in-out infinite;
+  transform-origin: bottom center;
+  will-change: transform;
+}
