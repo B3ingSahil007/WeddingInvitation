@@ -133,7 +133,7 @@ END:VCALENDAR`;
       <div className="relative w-full mt-4">
         {/* Couple Photo */}
         <img
-          src="/couple.png"
+          src="/couple.webp"
           alt="Groom Zohan & Bride Rose"
           className="w-full h-auto object-cover select-none block"
         />

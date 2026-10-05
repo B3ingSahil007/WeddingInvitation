@@ -3,7 +3,7 @@ import CountdownTimer from './CountdownTimer';
 
 export default function BlessingSection() {
   return (
-    <section className="relative w-full max-w-md mx-auto pt-8 pb-12 px-6 bg-[#fbf7ee] text-[#4a3a30] text-center select-none">
+    <section className="relative w-full max-w-md mx-auto pt-8 pb-8 px-6 bg-[#fbf7ee] text-[#4a3a30] text-center select-none">
       {/* Arabic Bismillah Image (public/bismillah.webp) */}
       <div className="mb-6 flex flex-col items-center">
         <img

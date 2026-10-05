@@ -66,20 +66,20 @@ export default function App() {
             <BlessingSection />
           </div>
 
-          {/* Torn Paper Deckle Edge */}
-          <DeckleEdge flip={true} />
+          {/* Torn Paper Deckle Edge: Cream card tearing over Parchment Schedule */}
+          <DeckleEdge color="#fbf7ee" />
 
           {/* SECTION 3: SCHEDULE OF EVENTS WITH SCROLL-LINKED FLOWER & LOCATION (Image 4) */}
           <ScheduleSection />
 
-          {/* Torn Paper Deckle Edge */}
-          <DeckleEdge />
+          {/* Wavy Scalloped Gold Divider */}
+          <DeckleEdge color="#fbf7ee" />
 
           {/* SECTION 4: MAP, DRESS CODE, GIFT PREFERENCE & RSVP WAX SEAL (Image 5) */}
           <DetailsSection onOpenRsvp={() => setIsRsvpOpen(true)} />
 
-          {/* Torn Paper Deckle Edge */}
-          <DeckleEdge flip={true} />
+          {/* Torn Paper Deckle Edge: Cream card tearing over Couple Section */}
+          <DeckleEdge color="#fbf7ee" />
 
           {/* SECTION 5: GROOM & BRIDE NAMES AND PORTRAIT (Bottom Section) */}
           <CoupleSection

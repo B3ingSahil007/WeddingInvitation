@@ -45,7 +45,7 @@ export default function ScheduleSection() {
   const activeIndex = Math.min(EVENTS.length - 1, Math.floor(flowerProgress * EVENTS.length));
 
   return (
-    <section className="relative w-full max-w-md mx-auto py-12 px-6 bg-[#fbf7ee] text-[#4a3a30] select-none">
+    <section className="relative w-full max-w-md mx-auto pt-6 pb-12 px-6 bg-[#fbf7ee] text-[#4a3a30] select-none">
       {/* Schedule of Events Heading */}
       <div className="text-center mb-10">
         <div className="flex items-center justify-center gap-3 text-[#b58c54]">
